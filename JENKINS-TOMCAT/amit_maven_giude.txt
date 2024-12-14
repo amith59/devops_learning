@@ -1,0 +1,41 @@
+https://maven.apache.org/guides/introduction/
+
+https://maven.apache.org/guides/introduction/introduction-to-archetypes.html
+
+https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html
+
+
+
+Parent Directory	 ---------------------------------------------------------	-	 
+introduction-to-archetypes.html	2024-11-18 21:16	14K	 
+introduction-to-dependency-mechanism.html	2024-11-18 21:16	45K	 
+introduction-to-optional-and-excludes-dependencies.html	2024-11-18 21:16	21K	 
+introduction-to-plugin-prefix-mapping.html	2024-11-18 21:16	16K	 
+introduction-to-plugins.html	2024-11-18 21:16	12K	 
+introduction-to-profiles.html	2024-11-18 21:16	44K	 
+introduction-to-repositories.html	2024-11-18 21:16	18K	 
+introduction-to-the-lifecycle.html	2024-11-18 21:16	38K	 
+introduction-to-the-pom.html	2024-11-18 21:16	30K	 
+introduction-to-the-standard-directory-layout.html
+--------------------------------------------------------------------------------------
+
+make qucikstart project
+===>mvn archetype:generate -DGroupId=AMtech  -DarchetypeArtifactId=maven-archetype-quickstart  -DartifactId=AtmApp  -DInteractiveMode=false
+
+
+
+==> mvn archetype:generate -DgroupId=com.example -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+
+
+mvn archetype:generate -DgroupId=edutech -DarchetypeArtifactId=maven-archetype-quickstart -DartifactId=edutechApp -DInteractiveMode=false
+
+yum "https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.56/bin/apache-tomcat-9.0.56.zip"
+
+
+
+make war file 
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-web-app -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-web-app -DarchetypeArtifactId=maven-archetype-webapp -DInteractiveMode=false
+

@@ -1,0 +1,62 @@
+1-first create a linux machine for jenkins 
+ then change the security group for all traffic 
+ then launched the ec2-machine with the any file
+ then go to the aws on jenkins
+ and follows the steps
+
+2-after installing jenkins it wants the password 
+then use cat command paste the whole address here
+
+3-installed the default pulgin first and create a first job 
+4- installed java
+5- installed git
+6-installed maven 
+7- go to the manage jenkins and tools and set all home path
+8- to see the git home path command is which git
+9- to see the path of maven and java 
+10- check the version of maven like mvn -version
+11-after setting path go to plugins and install
+12-maven-integration ,delivery plugin,SSH Agent Plugin,Workspace Cleanup Plugin
+13-now go to the add new item and create a new job
+14 -GitHub project -Project url 'For example: https://github.com/rails/rails for the Rails project'
+15-see the img1
+16-now create the user in git via selecting the user and see img 2
+18- generate  the pipline pipeline scripts
+19-after that add the ssh agent in the see img3
+20-add here testing or depoly server private for ec2-user img-4
+21-make pipeline for depolyment
+
+here is code ----
+-----------------------------------------------------------------
+pipeline{
+    agent any
+    stages{
+        stage("git"){
+            steps{
+                git branch: 'main', credentialsId: 'deploy_user', url: 'https://github.com/amith59/dec13war1.git'
+            }
+            
+        }
+        stage("bulid"){
+            steps{
+                sh "mvn package"
+            }
+        }
+        stage("build on test"){
+            steps{
+                
+                sshagent(['deploy_user1']) {
+                  //sh 'scp -o StrictHostKeyChecking=no  target/my-app-web 
+                 // sh "scp -o StrictHostKeyChecking=no target/my-app-web.war ec2-user@44.204.217.108:/home/tomcat9/webapps"
+                 sh "scp -o StrictHostKeyChecking=no target/my-web-app.war ec2-user@44.204.217.108:/home/tomcat9/webapps"
+    
+}
+                
+            }
+        }
+    }
+}
+-------------------------------------------------------------------------------------
+
+
+

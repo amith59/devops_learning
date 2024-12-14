@@ -1,0 +1,27 @@
+create a new instance with the linux server
+1-all security group is open
+2-launch the server
+3- install java
+4- install tomcat 
+how then go to the official website 
+copy the link address of apache.tar at any version 
+in linux using wget command
+1-command  wget  https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.98/bin/apache-tomcat-9.0.98.tar.gz
+2-ls
+3-tar -xvf apache-tomcat-9.0.98.tar.gz
+4-ls
+5- mv apache-tomcat-9.0.98 tomcat9
+6-cd tomcat9
+optional(i)go to short link then tomcat9 echo $PATH cd bin pwd path
+using ln -s first-path/startup.sh second path/tomcatup
+ln -s first-path/shutdown.sh second path/tomcatdown
+7-cd bin ./startup.sh see on copy public ip :8080 bydefault
+8-cd conf change server.xml in connector change port 8085
+8-go to the tomcat-users.xml 
+9-create <roll rolname="manager-gui,manager-status,manager-script"/>see img_user
+10-find / -name context.xml
+change the value comment on the particular value see the img_context
+
+
+imp permission here provided for chmod -R ec2-user:ec2-user /home
+it is not working then chown ec2-user:ec2-user /home/tomcat9/webapps
