@@ -1,0 +1,20 @@
+docker exec -it <contauner-id> bash  \\\ to enter the running conatiner
+
+---------------------------------------
+for ubuntu
+service docker start
+service docker status 
+
+---------------------------------------------
+docker mysql
+to install mysl
+-1 docker pull mysql
+-2 docker run --name mydb -d -e MYSQL_ROOT_PASSWORD=root mysql
+-3 docker container ls
+-4 docker exec -it mydb /bin/bash
+-5 mysql -u root -p
+-6 show databases;
+-7 create database name_db
+-8 use database_name
+-9 to create table
+-10  create table stud(rollno int ,name varchar(255));
